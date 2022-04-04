@@ -4,8 +4,27 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
-                echo 'In branch main ok...bye!!'
+            echo "Running on linux..."
+            sh 'ls'
+            sh 'pwd'
+               
+             sh '''
+              ssh -t ubuntu@54.210.172.111 <<-EOF
+              if [ -d "nodejs_multi_branch" ]
+              then
+                      cd nodejs_multi_branch
+                      git pull https://github.com/varunsonavni/nodejs_multi_branch.git
+
+              else
+                      git clone https://github.com/varunsonavni/nodejs_multi_branch.git
+                      cd nodejs_multi_branch
+
+              fi
+              pwd
+              pm2 restart index.js
+              pwd
+EOF
+'''
                 
             }
         }
