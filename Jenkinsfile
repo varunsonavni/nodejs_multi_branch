@@ -3,6 +3,12 @@ pipeline {
 
     stages {
         stage('Hello') {
+            
+            when {
+        allOf {
+            expression { env.BRANCH_NAME == "origin/master"}
+            }
+        }
             steps {
             echo "Running on linux..."
             sh 'ls'
