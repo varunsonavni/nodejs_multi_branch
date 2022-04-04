@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
-                echo 'In branch main'
+
+                echo 'In branch DEVVVVVVVVVVVVVVVV'
                 sh 'pwd'
                 sh 'ls'
            
