@@ -21,7 +21,7 @@ pipeline {
 
               fi
               pwd
-              pm2 restart index.js
+              pm2 restart 1
               pwd
 EOF
 '''
