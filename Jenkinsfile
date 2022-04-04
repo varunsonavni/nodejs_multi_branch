@@ -5,9 +5,8 @@ pipeline {
         stage('Hello') {
             steps {
                 
-                echo "Running on linux..."
-                ls
-                pwd
+                sh 'ls'
+                sh 'pwd'
                 sh '''
                   ssh -t ubuntu@54.210.172.111 <<-EOF
                   if [ -d "NodeJSJenkins" ]
