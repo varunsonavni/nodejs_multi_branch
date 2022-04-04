@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
                 echo 'Hello World'
-                echo 'In branch main'
+                echo 'In branch main ok...'
                 
             }
         }
