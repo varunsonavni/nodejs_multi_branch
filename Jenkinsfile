@@ -6,11 +6,11 @@ pipeline {
             
             when {
         allOf {
-            expression { env.BRANCH_NAME == "origin/main"}
+            expression { env.BRANCH_NAME == "main"}
             }
         }
             steps {
-            echo "Running on linux..."
+            echo "Running on linux.dfdfd.."
             sh 'ls'
             sh 'pwd'
                
