@@ -6,7 +6,7 @@ pipeline {
             
             when {
         allOf {
-            expression { env.BRANCH_NAME == "origin/master"}
+            expression { env.BRANCH_NAME == "origin/main"}
             }
         }
             steps {
